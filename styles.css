@@ -1,0 +1,183 @@
+/*Layout*/
+
+.layout-page {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 130px 40rem 36rem 36rem 36rem 100px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "section-1 section-1 section-1"
+    "section-2 section-2 section-2"
+    "section-3 section-3 section-3"
+    "footer footer footer";
+    
+}
+
+/*Header*/
+.headerWrapper {
+    grid-area: header; 
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: #28AA6A;
+
+}
+/*contenedor logo*/
+.headerWrapper__logoWrapper {
+ display: flex;
+ flex: 0 1 20vw;
+ padding: 1rem;
+}
+
+.headerWrapper__logoEmbed {
+    flex-grow: 1;
+    object-fit: contain;
+    
+}
+/*contenedor navbar*/
+.headerWrapper__dropdown{
+    display: none;
+}
+
+.headerWrapper__navbar {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1 1 50vw;
+    padding: 1rem 1.3rem;
+    
+}
+
+.headerWrapper__btn {
+    margin: 0 0.2rem;
+    font: 400 1rem  Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    background-color: #DB841C;
+    color:#fff;
+    
+}
+
+.headerWrapper__btn:hover {
+    border-radius: 30px 0 30px 0;
+    background-color: #ff8c00;
+    color:#fff;
+    transform: scale(1.12);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    transition: 0.6s;
+}
+
+.headerWrapper__btn--primary {
+    text-decoration: none;
+    color: #fff;
+}
+
+.headerWrapper__btn--secondary {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*Main*/
+.main-cntWrapper {
+    grid-area: main; 
+    display: flex;
+    max-height: 40rem;
+    background-color: aqua; /*No olvides eliminar este background*/
+}
+
+
+/*Contenedor sección 1*/
+.section-1 {
+    grid-area: section-1;
+    background-color: bisque; /*No olvides eliminar este background*/
+    
+}
+/*Contenedor sección 2*/
+.section-2 {
+    grid-area: section-2;
+    background-color: #0B4D43;
+    
+}
+/*Contenedor sección 3*/
+.section-3 {
+    grid-area: section-3;
+    background-color: blue; /*No olvides eliminar este background*/
+}
+
+/*Contenedor footer*/
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #28AA6A;
+}
+
+.titlefoo {
+    font: 400 1rem  Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+@media screen and (max-width: 767px) {
+
+  .headerWrapper__navbar {
+    display: none; /* Ocultar el Navbar en dispositivos móviles */
+  }
+  
+  .headerWrapper__dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .headerWrapper__dropbtn {
+    background-color: transparent;
+    color: #fff;
+    font-size: 3rem;
+    padding: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .headerWrapper__dropdown-content {
+    display: none;
+    position: absolute;
+    top: 130px;
+    left: 0; 
+    width: 100%;
+    min-height: 200px;
+    background-color: #0B4D43 ;
+
+  }
+  
+  .headerWrapper__btn--primary {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 10px;
+    align-items: center;
+    font: 400 1.4rem  Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    background-color: transparent;
+    color:#fff;
+  }
+  
+  .headerWrapper__btn--primary:hover {
+    text-decoration: none;
+    border-radius: 30px 0 30px 0;
+    background-color: #ff8c00;
+    color:#fff;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    transition: 0.6s;
+  }
+
+  /* Mostrar el menú desplegado al hacer hover en el Navbar móvil */
+  .headerWrapper__dropdown:hover .headerWrapper__dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+
+    
+}
+
+/* Copiar cada uno su CSS*/
