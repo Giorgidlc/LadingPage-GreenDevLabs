@@ -25,10 +25,10 @@
 }
 /*contenedor logo*/
 .headerWrapper__logoWrapper {
- display: flex;
- flex: 0 1 20vw;
- padding: 1rem;
-}
+  display: flex;
+  flex: 0 1 20vw;
+  padding: 1rem;
+} 
 
 .headerWrapper__logoEmbed {
     flex-grow: 1;
@@ -81,8 +81,160 @@
 .main-cntWrapper {
     grid-area: main; 
     display: flex;
-    max-height: 40rem;
-    background-color: aqua; /*No olvides eliminar este background*/
+    flex: 1 1 auto;
+    flex-direction: column;
+    background-image:url(./img/sonriente-hombre-mujer.png);
+    flex-wrap: wrap;
+    z-index:-1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: space-around; /*No olvides eliminar este background*/
+}
+
+.card{
+  justify-content: center;
+  width: 18vw;
+  flex-shrink: 0;
+  top: 5%;
+  margin-top: 1vh;
+  margin-left: 12%;
+  border: solid grey 1px;
+  border-radius: 40px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: white;
+  font-family: "Didact Gothic"- sans-serif;
+  height: fit-content;
+}
+
+
+.title{
+  display: flex;
+  width: fit-content;
+  color: #111827;
+  font-size: clamp(1.2rem , 2vw, 2.8rem);
+  font-family: Didact Gothic;
+  line-height: 1.9rem;
+  margin-bottom: 5%;
+  font-weight: 300;
+}
+
+.name{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  align-items: center;
+  justify-items: center;
+  color: #0000;
+  width: 100%;
+  font-family: Didact Gothic;
+  height: fit-content;
+}
+
+input{
+
+  display: flex;
+  flex-direction:column;
+  align-items:space-evenly;
+  height: 4.5vh;
+  border: 1px solid grey;
+  color: #67696d;
+  font-size: clamp(0.9rem , 1.5vw, 1.3rem);
+  font-family: Didact Gothic;
+  margin-bottom: 5%;
+  border-radius: 30px;
+  width: 97%;
+  border: 1px solid #E5E7EB;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  justify-self: center;
+}
+
+.cta-btn{
+  width:40%;
+  height: 4.4vh;
+  color: white;
+  font-family: Didact Gothic;
+  font-weight: bold;
+  font-size: clamp(0.9rem , 1.5vw, 1.6rem);
+  background-color: #28AA6A;
+  border: none;
+  border-radius: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  transform: translateX(70%);
+}
+
+label {
+color: #000;
+font-size: 1.3rem;
+font-family: Didact Gothic;
+font-size: clamp(1rem , 2vw, 1.3rem);
+align-self: start;
+margin-left: 0.4rem;
+margin-bottom: 2.5%;
+}
+
+
+.action{
+  position: absolute;
+  top: 90vh; 
+  right: 15%;
+  z-index:1;
+  width: 20vw;
+  height: 5vh;
+  border-radius: 30px 0px;
+  color:white;
+  background: #28AA6A;
+  align-content: center;
+  font-family: Didact Gothic;
+  font-weight: bold;
+  font-size: clamp(0.9rem , 2vw, 1rem);
+  text-align: center;
+  line-height: 1.875rem;
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+  padding-right: 3%;
+  padding-left: 3%;
+  
+}
+
+@media (max-width:767px)  { 
+  
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45vw;
+    align-self: center;
+    flex-shrink: 0;
+    margin-top: 1vh;
+    border: solid grey 1px;
+    border-radius: 40px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+    font-family: "Didact Gothic"- sans-serif;
+    height: fit-content;
+    order: 1;
+    transform: translateY(70vh);
+  }
+  
+  .title{
+    align-self: center;
+  }
+
+  .action{
+    transform: translateY(100vh);
+    top: 0;
+    width: 50%;
+    margin-right: 5%;
+  }
 }
 
 
@@ -175,7 +327,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-   }
+  }
 
     
 }
