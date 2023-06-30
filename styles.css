@@ -4,7 +4,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 130px 40rem 40rem 36rem 36rem 100px;
+    grid-template-rows: 130px 90% max-content max-content max-content 100px;
     grid-template-areas: 
     "header header header"
     "main main main"
@@ -83,32 +83,29 @@
     grid-area: main; 
     display: flex;
     flex: 1 1 auto;
-    flex-direction: column;
+    align-items: center;
     background-image:url(./img/sonriente-hombre-mujer.png);
     flex-wrap: wrap;
     z-index:-1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    justify-content: space-around; /*No olvides eliminar este background*/
+    justify-content: space-between;
+    padding: 0 10%;
 }
 
 .card{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 18vw;
-  flex-shrink: 0;
-  top: 5%;
-  margin-top: 1vh;
-  margin-left: 12%;
+  align-content: center;
+  max-width: 20rem;
   border: solid grey 1px;
   border-radius: 40px;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 3rem;
   background-color: white;
   font-family: "Didact Gothic"- sans-serif;
-  height: fit-content;
+
 }
 
 
@@ -181,74 +178,38 @@ margin-bottom: 2.5%;
 
 
 .action{
-  position: absolute;
-  top: 90vh; 
-  right: 15%;
-  z-index:1;
+  display: flex;
+  justify-content:center;
+  align-items: center;
   width: 20vw;
   height: 5vh;
   border-radius: 30px 0px;
   color:white;
   background: #28AA6A;
-  align-content: center;
   font-family: Didact Gothic;
   font-weight: bold;
-  font-size: clamp(0.9rem , 2vw, 1rem);
-  text-align: center;
-  line-height: 1.875rem;
-  padding-top: 1%;
-  padding-bottom: 0.5%;
-  padding-right: 3%;
-  padding-left: 3%;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  padding: 1% 3%;
+  align-self: flex-end;
+  margin-bottom: 20vh;
   
-}
-
-@media (max-width:767px)  { 
-  
-  .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 45vw;
-    align-self: center;
-    flex-shrink: 0;
-    margin-top: 1vh;
-    border: solid grey 1px;
-    border-radius: 40px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
-    background-color: white;
-    font-family: "Didact Gothic"- sans-serif;
-    height: fit-content;
-    order: 1;
-    transform: translateY(70vh);
-  }
-  
-  .title{
-    align-self: center;
-  }
-
-  .action{
-    transform: translateY(100vh);
-    top: 0;
-    width: 50%;
-    margin-right: 5%;
-  }
 }
 
 
 /*Contenedor sección 1*/
 .section-1 {
     grid-area: section-1;
+    display: flex;
+    align-items: center;
+
     
     
 }
 /*Contenedor sección 2*/
 .section-2 {
     grid-area: section-2;
-    background-color: #0B4D43;
+    background-color: #0B4D43; 
+    padding: 5% 0;   
     
 }
 /*Contenedor sección 3*/
@@ -329,14 +290,31 @@ margin-bottom: 2.5%;
     justify-content: space-evenly;
   }
 
+/*MAIN MOVIL*/
+  .card{
+    height: fit-content;
+    order: 1;
+    margin: auto;
+    transform: translateY(70vh);
+  }
+  
+  .title{
+    align-self: center;
+  }
+
+  .action{
+    transform: translateY(15vh);
+    top: 0;
+    width: 50%;
+    margin-right: 5%;
+  }
+
     
 }
 
 /* Copiar cada uno su CSS*/
 .section1 {
     display: flex;
-    width: 100%;
-    height: auto;
     justify-content: space-around;
     flex-direction: column;
     padding-top: 5%;
@@ -344,176 +322,116 @@ margin-bottom: 2.5%;
   
   .title-section1 {
     display: flex;
-    font-size: 3.75rem;
-    display: flex;
+    font-size: clamp(1rem, 6vw, 3.5rem);
     justify-content: start;
     align-items: center;
+    gap: 2rem;
   }
-  .title-section1 h2 {
-      width: 40vw;
-      margin-right: 5%;
-      margin-left: 5%;
-    }
   
   .section1-row {
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
     gap: 5%;
-    padding-top: 5%;
+    padding: 5% 10%;
+  
     
   }
   .box {
     display: flex;
-    height: 0%;
-    width: auto;
+    flex: 1 1 auto; 
     border-color: black;
     border-radius: 1rem;
     box-shadow: 10px 10px 15px grey;
     background-color: whitesmoke;
     align-items: center;
     flex-direction: column;
+    padding: 2%;
+    margin: 1rem;
+    gap: 1rem;
     text-align: center;
+
   }
   
-  .box p {
-    padding: 5%;
-  }
   .box h4 {
     font-weight: bold;
   }
 
-  @media screen and (max-width: 767px){
-   
-    .section1 {
-        display: flex;
-        width: auto;
-        height: 100%;
-        justify-content: space-around;
-        flex-direction: column;
-        padding-top: 5%;
-      }
-      
-      .title-section1 {
-        display: flex;
-        font-size: 1.5rem;
-        justify-content:start;
-        align-items: center;
-        width: 100%;
-      }
-      .title-section1 br{
-       display: none;
-      }
-      .title-section1 h2 {
-          width: 100vw;
-          margin-right: 5%;
-          margin-left: 5%;
-    
-        }
-        .title-section1 img{
-            width: 6rem;
-            height: 3.5rem;
-          flex-direction: column;
-        }
-            
-      .section1-row {
-        display: flex;
-        justify-content:space-around;
-        flex-direction: column;
-        width: auto;
-        height: 100%;
-        gap: 5%;
-        padding: 5%;
-      }
-      .box {
-        display: flex;
-        height: fit-content;
-        width:fit-content;
-        border-color: black;
-        border-radius: 1rem;
-        box-shadow: 10px 10px 15px grey;
-        background-color: whitesmoke;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        gap: 5%;
-        font-size: 1rem;
-      }
-      .box img{
-        width:15%;
-        height:min-content;
-      }
-      .box p {
-        padding: 5%;
-      }
-      .box h4 {
-        font-weight: bold;
-    }
-   
-    }
+  
 /*lo de arriba Gisela, abajo Andrea*/
 * {
   font-family: 'Didact Gothic', sans-serif;
+  
 }
-.services {
-  background-color: #0B4D43;
-  padding-bottom: 1%;
-}
+
 .services--title {
   display: flex;
   justify-content: end;
   align-items: center;
   color: #FFF;
   text-align: right;
-  font-size: 3.75rem;
-  padding-top: 1rem;
+  font-size: clamp(1rem, 6vw, 3.5rem);
+  gap: 2rem;
 }
 .services--description {
-  padding: 4%;
-  margin: 5%;
-  width: 75%;
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto 0;
+  padding: 10%;
+  width: 66%;
   border-radius: 60px 0px;
   background: #FAF7F7;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
 .team--title{
-  margin-top: 3%;
-  margin-bottom: 3%;
   display: flex;
+  font-size: clamp(1rem, 6vw, 3.5rem);
   justify-content: start;
   align-items: center;
-  font-size: 3.75rem;
+  gap: 2rem;
+  padding: 5% 0;
 }
-.img--team {
-  width: 70%;
-}
-h2 {
-  width: 40vw;
-  margin-right: 5%;
-  margin-left: 5%;
+
+ol li{
+  list-style: decimal;
+  padding: 0.5rem 0;
 }
 .acordeon {
   width: 30%;
-  background-color: #28AA6A;
+  background-color: #0B4D43;;
   color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   text-align: justify;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 summary{
-  background-color: #28AA6A;
-  padding: 0.5rem;
+  background-color: #DB841C;
+  border-radius: 30px 0 30px 0;
+  padding: 1rem;
+  color: white;
 }
+
 .meetUs {
   display: flex;
 }
+.ctn-img {
+  display: flex;
+  width: 100%;
+  
+}
+
+.img--team {
+  flex-grow: 1;
+  width: 0;
+  object-fit: cover;
+}
 .pictures {
   width: 5vw;
+  margin: 1rem;
   margin-left: 1rem;
   border-radius: 10px;
 }
@@ -523,4 +441,52 @@ summary{
 }
 details p {
   margin-left: 1rem;
+}
+
+
+@media screen and (max-width: 767px){
+   
+  .section-1{
+    margin-top: 130%;
+  }   
+  .title-section1 {
+   flex-direction: column;
+   align-items: start;
+   gap: 1rem;
+  }
+           
+.section1-row {
+    display: flex;
+    flex-direction: column;
+    gap: 25%;
+  }
+.services--title {
+flex-direction: column-reverse;
+align-items: end;
+gap: 2rem;
+
+}
+
+.team--title{
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.meetUs {
+  flex-direction: column;
+}
+.acordeon {
+  width: auto;
+}
+
+.pictures {
+  width: 24vw;
+}
+
+h2{
+  padding: 0 15%;
+  font-size: clamp(1rem, 10vw, 3.5rem)
+  
+}
 }
