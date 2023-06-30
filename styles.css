@@ -12,6 +12,7 @@
     "section-2 section-2 section-2"
     "section-3 section-3 section-3"
     "footer footer footer";
+    font-family: 'Didact Gothic', sans-serif;
     
 }
 
@@ -253,7 +254,6 @@ margin-bottom: 2.5%;
 /*Contenedor sección 3*/
 .section-3 {
     grid-area: section-3;
-    background-color: blue; /*No olvides eliminar este background*/
 }
 
 /*Contenedor footer*/
@@ -468,6 +468,7 @@ margin-bottom: 2.5%;
   color: #FFF;
   text-align: right;
   font-size: 3.75rem;
+  padding-top: 1rem;
 }
 .services--description {
   padding: 4%;
@@ -486,7 +487,7 @@ margin-bottom: 2.5%;
   font-size: 3.75rem;
 }
 .img--team {
-  width: 100%;
+  width: 70%;
 }
 h2 {
   width: 40vw;
@@ -494,16 +495,32 @@ h2 {
   margin-left: 5%;
 }
 .acordeon {
-  width: 70vw;
-  padding: 2rem;
-  background-color: aqua;
-  border: 3px solid red;
+  width: 30%;
+  background-color: #28AA6A;
+  color: white;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem
+  gap: 1rem;
+  text-align: justify;
+  padding: 1rem;
 }
 
 summary{
-  background-color: lightgreen;
-  padding: 1rem;
+  background-color: #28AA6A;
+  padding: 0.5rem;
+}
+.meetUs {
+  display: flex;
+}
+.pictures {
+  width: 5vw;
+  margin-left: 1rem;
+  border-radius: 10px;
+}
+.wrapper--acordeon {
+  display: flex;
+  align-items: center;
+}
+details p {
+  margin-left: 1rem;
 }
