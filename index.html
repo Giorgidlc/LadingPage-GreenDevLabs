@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-page">
+         <!--Contenedor header-->
+        <header class="headerWrapper">
+            <figure class="headerWrapper__logoWrapper">
+                <img class="headerWrapper__logoEmbed" src="/img/logo-GreenDevLabs.svg"  type="img/svg" alt="logo-GreenDevLabs" type="img/svg">
+            </figure>
+            <nav class="headerWrapper__navbar">
+                <ul>
+                    <li class="headerWrapper__navbar headerWrapper__btn"><a class="headerWrapper__btn--primary" href="">Services</a></li>
+                    <li class="headerWrapper__navbar headerWrapper__btn"><a class="headerWrapper__btn--primary" href="">About Us</a></li>
+                    <li class="headerWrapper__navbar headerWrapper__btn"><a class="headerWrapper__btn--secondary" href="">Contact</a></li>
+                </ul>
+            </nav>
+            <!--Navbar Mobil-->
+            <nav class="headerWrapper__dropdown">
+                <button class="headerWrapper__dropbtn">☰</button>
+                <div class="headerWrapper__dropdown-content">
+                  <a class="headerWrapper__btn--primary" href="#">Services</a>
+                  <a class="headerWrapper__btn--primary" href="#">About Us</a>
+                  <a class="headerWrapper__btn--primary" href="#">Contact</a>
+                </div>
+            </nav>
+        </header>
+         <!--Contenedor main-->
+        <main class="main-cntWrapper">
+          <div class="card">
+            <h2 class="title"> We help you achieve your goals</h2>
+              <div class="name"><label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="   Full name" name="uname" required>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="   Example@example.ex" name="email" required>
+                <label for="phone"><b>Phone Number</b></label>
+                  <input type="text" placeholder="    We'll call you ASAP" name="phone" required></div>
+              <button class="cta-btn">Contact Us</button>
+        </div>
+        <div class="action">Digitalize your business</div>
+        </main>
+          
+        <section class="section-1">
+            <!--Colocar aquí la Sección 1-->
+          <div class="section1">
+            <div class="title-section1">
+              <img src="img/section1-circuit.png" alt="circuit" />
+              <h2>Why we are <br/>your best option</h2>
+            </div>
+  
+            <div class="section1-row">
+              <div class="box">
+                <img src="img/Computer-Section1.png" alt="computer" />
+                <h4>Custom Software Development</h4>
+                <p>
+                  Customized software developed to impulse your business toward
+                  success.
+                </p>
+              </div>
+            
+              <div class="box">
+                <img src="img/Settings-Seccion1.png" alt="settings" />
+                <h4>Process Digitalization</h4>
+                <p>
+                  Digitalization of processes to optimize productivity and improve
+                  client experience.
+                </p>
+              </div>
+              <div class="box">
+                <img src="img/Handshake-Section1.png" alt="handshake" />
+                <h4>Long term relationships</h4>
+                <p>
+                  Establish long term relationships based on confidence and proven
+                  results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-2">
+          <div class="services--title">
+            <h2>Discover our<br>service kits</h2>
+            <img src="img/adorno.png" alt="adorno">
+        </div>
+        <div class="services--description">
+            <ol>
+                <li>Digitalization, consulting and advisory services.</li>
+                <li>Basic maintenance training to provide autonomy to small businesses.</li>
+                <li>Marketing and advertising campaign to promote rural tourism and access to small businesses by the population.</li>
+                <li>Specialized advice on sustainability strategies to reduce environmental impact.</li>
+            </ol>
+        </div>
+       </section>
+        <section class="section-3">
+        <section class="team">
+          <div class="team--title">
+            <img src="img/adorno1.png" alt="adorno">
+            <h2>Meet us</h2>
+        </div>
+        <div class="meetUs">
+        <div class="ctn-img">
+          <img class="img--team" src="img/img team.png" alt="Foto del team">
+        </div>
+        <div class="acordeon">
+        <details>
+            <summary>Jorge</summary>
+            <div class="wrapper--acordeon">
+            <img class="pictures" src="img/jorge.jpeg" alt="Foto de Jorge">
+            <p>Product Owner. Designer and Developer. Passionate about image and technology, I like to help people talk and connect with their ideal clients through visual communication strategies.</p>
+              </div>
+          </details>
+
+        <details>
+            <summary>Gisela</summary>
+            <div class="wrapper--acordeon">
+            <img class="pictures" src="img/gisela.jpeg" alt="Foto de Gisela">
+            <p>Scrum Master. I am a web developer, passionate about the product and detail. I enjoy  outdoors activies with family and friends. My hobby is lettering</p>
+          </div>
+        </details>
+
+        <details>
+            <summary>Jes</summary>
+            <div class="wrapper--acordeon">
+            <img class="pictures" src="img/jes.jpeg" alt="Foto de Jes">
+            <p>Developer and language teacher. I like to offer solutions to problems.</p></div>
+        </details>
+
+        <details>
+            <summary>Pedro</summary>
+            <div class="wrapper--acordeon">
+            <img class="pictures" src="img/pedro.jpeg" alt="Foto de Pedro">
+            <p>Developer. I'm a Full Stack developer with experience in developing web applications. Passionate about creating complete and efficient solutions to meet user needs.</p></div>
+        </details>
+
+        <details>
+            <summary>Andrea</summary>
+            <div class="wrapper--acordeon">
+            <img class="pictures" src="img/andrea.jpeg" alt="Foto de Andrea">
+            <p>Developer. Passionate about web development and sports. Committed to the field of health.</p></div>
+        </details>
+    </div></div>
+        </section></section>
+        <footer class="footer">
+            <div class="titlefoo">© GreenDevLabs</div>
+        </footer>
+    </div>
+</body>
+</html>
