@@ -22,7 +22,7 @@
     display: inline-flex;
     justify-content: space-between;
     background-color: #28AA6A;
-s
+    
 }
 /*contenedor logo*/
 .headerWrapper__logoWrapper {
@@ -449,7 +449,7 @@ details p {
   .section-1{
     margin-top: 40rem;
   }   
-  
+
   .title-section1 {
    flex-direction: column;
    align-items: start;
