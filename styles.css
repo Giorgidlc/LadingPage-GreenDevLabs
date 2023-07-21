@@ -22,7 +22,7 @@
     display: inline-flex;
     justify-content: space-between;
     background-color: #28AA6A;
-
+s
 }
 /*contenedor logo*/
 .headerWrapper__logoWrapper {
@@ -200,7 +200,7 @@ margin-bottom: 2.5%;
 .section-1 {
     grid-area: section-1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 
     
     
@@ -282,7 +282,7 @@ margin-bottom: 2.5%;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     transition: 0.6s;
   }
-
+ 
   /* Mostrar el menú desplegado al hacer hover en el Navbar móvil */
   .headerWrapper__dropdown:hover .headerWrapper__dropdown-content {
     display: flex;
@@ -295,7 +295,7 @@ margin-bottom: 2.5%;
     height: fit-content;
     order: 1;
     margin: auto;
-    transform: translateY(70vh);
+    transform: translateY(40rem);
   }
   
   .title{
@@ -447,8 +447,9 @@ details p {
 @media screen and (max-width: 767px){
    
   .section-1{
-    margin-top: 130%;
+    margin-top: 40rem;
   }   
+  
   .title-section1 {
    flex-direction: column;
    align-items: start;
